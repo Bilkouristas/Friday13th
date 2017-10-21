@@ -16,6 +16,9 @@ public class friday13 {
 			   k = 1;
 		    }
 		    extraday = (((diff/4)*5 + (diff%4 + k)) % 7);
+				extraday = extraday - ((diff+12)/100)// αφαιρει τα δισεκτα που μπηκαν λαθος πριν
+				extraday = extraday + ((diff+12)/400)// προσθετη αυτα που εβγαλε λαθος η προηγουμενη εντολη 
+					
 		}
 		else {
 			if(diff%4 != 3) {
