@@ -23,8 +23,11 @@ public class friday13 {
 			if(diff%4 != 3) {
 				k = -1;
 			}
-			extraday = (((diff/4)*5)+(diff%4 + k)) % 7;
-			extraday=8+extraday ;
+			extraday = ((diff/4)*5)+(diff%4 + k) ;
+			extraday = extraday + ((diff-77)/100); // -77 ωστε η διαφορα να γινει - 100
+			extraday = extraday - ((diff-377)/400); // -377 διοτι πρεπει να μετραει το 2000 σαν δισεκτο
+			extraday = extraday % 7;
+			extraday = 8 + extraday ;
 		}
 		String day = "";
 		switch(extraday) {
@@ -56,6 +59,7 @@ public class friday13 {
 			day = "Monday";
 		}
 		System.out.println(day);
+		System.out.println(extraday);
 	}
 	
 }
