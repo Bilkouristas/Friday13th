@@ -15,10 +15,10 @@ public class friday13 {
 		    if(diff%4 != 0) {
 			   k = 1;
 		    }
-		    extraday = (((diff/4)*5 + (diff%4 + k)) % 7);
+		    extraday = (diff/4)*5 + (diff%4 + k) ;
 				extraday = extraday - ((diff+12)/100); // αφαιρει τα δισεκτα που μπηκαν λαθος πριν
 				extraday = extraday + ((diff+12)/400); // προσθετη αυτα που εβγαλε λαθος η προηγουμενη εντολη 
-					
+					extraday = extraday % 7 ;        // αφου τελειωσει με τις πραξεις κανει το % 7 για να βρει την εξτρα μερα 
 		}
 		else {
 			if(diff%4 != 3) {
@@ -57,7 +57,6 @@ public class friday13 {
 			day = "Monday";
 		}
 		System.out.println(day);
-
 	}
 	
 }
