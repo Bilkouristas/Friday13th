@@ -58,8 +58,42 @@ public class friday13 {
 		case 8:
 			day = "Monday";
 		}
+		
+		int month = 1;
+		int feb = 1;
+			if (year%4!=0 || ( year%100==0  & year%400!=0 ) ) {
+			feb = 0;
+		}
+			
+		System.out.println(extraday%7);
+	
+			if (extraday%7 == 0 )  {
+			System.out.println("13/" + month + "/" + year );
+			month++;
+		} 
+		extraday += feb;
+			if (extraday%7 == 0 ) {
+			System.out.println("13/" +  month + "/" + year);
+			month++;
+		}
+			for(int i= 3; i<=8 ; i++) {
+				int c = 3 ;
+				extraday = extraday + (-1)^(i) + (5/2) + (1/2) * (-1)^(i+1) ;
+					if (extraday%7 ==0 ) {
+						System.out.println("13/" +  month + "/" + year);
+						month++;
+			}
+			c++ ;
+			if (c==8) {
+				i = 3;
+			}
+			
+		}
+	
+		
 		System.out.println(day);
 		System.out.println(extraday);
+		
 	}
 	
 }
