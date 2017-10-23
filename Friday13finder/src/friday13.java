@@ -55,7 +55,7 @@ public class friday13 {
 		month++;
 		extraday += feb;
 		int c = 3 ;
-		for(int i= 3; i<=8 ; i++) {			
+		for(int i= 3; i<=9 ; i++) {			
 			if (extraday%7 ==0 ) {
 				System.out.println("13/" +  month + "/" + year);
 			}
@@ -63,7 +63,7 @@ public class friday13 {
 			month++;
 			c++ ;
 			if (c==8) {
-				i = 3;
+				i = 4;
 			}
 			
 		}
@@ -118,7 +118,7 @@ public class friday13 {
 			month++;
 			extraday += feb;
 			int c = 3 ;
-			for (int j =3 ;j<=8 ; j++) { 
+			for (int j =3 ;j<=9 ; j++) { 
 				if (extraday%7 ==0 ) {
 					System.out.println("13/" +  month + "/" + year);
 				}
@@ -126,7 +126,7 @@ public class friday13 {
 				month++;
 				c++ ;
 				if (c==8) {
-					j = 3;
+					j = 4;
 				}
 			}
 		  year += 1 ;
