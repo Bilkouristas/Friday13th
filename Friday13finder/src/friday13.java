@@ -71,7 +71,7 @@ public class friday13 {
 			System.out.println("13/" + month + "/" + year );
 			month++;
 		} 
-		extraday += feb;
+		extraday += feb;// +=3
 			if (extraday%7 == 0 ) {
 			System.out.println("13/" +  month + "/" + year);
 			month++;
