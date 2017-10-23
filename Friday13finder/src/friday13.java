@@ -78,7 +78,7 @@ public class friday13 {
 		}
 			for(int i= 3; i<=8 ; i++) {
 				int c = 3 ;
-				extraday = extraday + (-1)^(i) + (5/2) + (1/2) * (-1)^(i+1) ;
+				extraday = extraday + (-1)^(i) + (5/2) + (1/2) * (-1)^(i+1) ; // λαθος
 					if (extraday%7 ==0 ) {
 						System.out.println("13/" +  month + "/" + year);
 						month++;
